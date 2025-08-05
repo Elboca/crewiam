@@ -63,7 +63,7 @@ def generate_file(content, filename):
 
 # --- Run CrewAI ---
 def run_crew(code, docs_summary):
-    llm = ChatOpenAI(model="gpt-4o-mini, temperature=0.2, max_tokens=4000)
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2, max_tokens=4000)
     search_tool = SerperDevTool()
 
     reviewer = Agent(
