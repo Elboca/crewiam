@@ -1,1 +1,8 @@
 streamlit
+crewai
+crewai_tools
+python-dotenv
+langchain
+langchain-openai
+pyrebase4
+pymupdf
