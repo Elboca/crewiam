@@ -1,4 +1,8 @@
 import streamlit as st
+import requests
+import urllib3
+from requests.packages.urllib3.contrib import appengine
+
 import pyrebase
 import json
 from crewai import Agent, Task, Crew
