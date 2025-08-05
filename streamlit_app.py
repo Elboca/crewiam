@@ -12,8 +12,8 @@ import fitz  # PyMuPDF
 
 # Load environment variables
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY")
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI")
+os.environ["SERPER_API_KEY"] = os.getenv("SERPER")
 
 # Load Firebase config
 with open("firebase_config.json") as f:
@@ -63,7 +63,7 @@ def generate_file(content, filename):
 
 # --- Run CrewAI ---
 def run_crew(code, docs_summary):
-    llm = ChatOpenAI(model="gpt-4", temperature=0.2, max_tokens=4000)
+    llm = ChatOpenAI(model="gpt-4o-mini, temperature=0.2, max_tokens=4000)
     search_tool = SerperDevTool()
 
     reviewer = Agent(
